@@ -11,6 +11,7 @@ user.age = '30'
 type Config = Record<string, string | number>
 
 // Use satisfies to check if the object satisfies the type & narrow down the type
+// If you use Variable annotation, you lost the type narrowing
 const config ={
     expiresIn: 60,
     secret: 'secret'
