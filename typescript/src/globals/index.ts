@@ -1,49 +1,41 @@
 
 // Non fare questo
-(window as any).foo
+(window as any).foo()
 
-// Usa questo
-// declaration merging
-// https://www.typescriptlang.org/docs/handbook/declaration-merging.html
-
-// Con type non funzionarebbe
-
-type GA = {
-    track: (event: string) => void
-    enable: boolean
-    dajeRomaDaje: string
-}
-
-// E' relativo solo al tuo file
-declare const window: {
-    foo: () => string
-    bar: () => number
+export type GoogleAnalytics = {
+    track(): void
+    send(): void
 }
 
 declare global {
-//   interface Window {
-//     foo: () => string
-//   }
+    // interface Window {
+    //     foo(): string
+    // }
 
-//   interface Window {
-//     bar: () => number
-//   }
+    // interface Window {
+    //     bar(): string
+    // }
 
-  type GoogleAnalytics = GA
+    type GA = GoogleAnalytics
 }
 
-// Ora puoi usare window.foo e window.bar senza errori
+declare const window: {
+    foo(): string
+    bar(): string
+}
+
 window.foo()
 window.bar()
 
-const ga = {
-    track: (event) => {
-        console.log(event)
+const test:GA = {
+    track() {
+        console.log('track')
     },
-    enable: false,
-    dajeRomaDaje: 'daje'
-} satisfies GoogleAnalytics
+    send(){
+        console.log('send')
+    }
+}
 
-ga.track('test')
+
 
 export {}

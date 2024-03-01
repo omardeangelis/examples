@@ -1,19 +1,17 @@
 import {JSX, ReactNode} from "react"
 
 export const exampleNode:ReactNode[] = [
-    <div key="1">Hello</div>,
-    <div key="2">World</div>,
-    "Hello",
-    1,
+   <div>Example</div>,
+    "Example",
+    null,
     undefined,
-    null
+    123,
 ]
 
 export const exampleJsx:JSX.Element[] = [
-    <div key="1">Hello</div>,
-    <div key="2">World</div>,
-    "Hello",
-    1,
+    <div>Example</div>,
+    "Example",
+    null,
     undefined,
-    null
+    123,
 ]
