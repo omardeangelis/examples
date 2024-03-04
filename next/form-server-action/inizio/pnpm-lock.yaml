@@ -41,6 +41,9 @@ dependencies:
   tailwindcss-animate:
     specifier: ^1.0.7
     version: 1.0.7(tailwindcss@3.4.1)
+  use-react-form:
+    specifier: ^0.0.1
+    version: 0.0.1
   zod:
     specifier: ^3.22.4
     version: 3.22.4
@@ -2792,6 +2795,10 @@ packages:
     dependencies:
       punycode: 2.3.1
     dev: true
+
+  /use-react-form@0.0.1:
+    resolution: {integrity: sha512-ErRcvRjf3be5x1ujvN6WiZIDZIz3GfCk/U/h6e/MzqlC6reMKOQ/u13bk8g/BtAcrwuYxIHArz4/w0utvS7QTg==}
+    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
