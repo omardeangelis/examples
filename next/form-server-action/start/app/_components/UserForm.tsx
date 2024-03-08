@@ -31,10 +31,19 @@ export const UserForm = () => {
 
   const formRef = useRef<null | HTMLFormElement>(null);
 
+  const onSubmit = form.handleSubmit((values) => {
+    console.log("sei troppo un grande", values);
+    form.reset(defaultValues);
+  });
+
   return (
     <>
       <Form {...form}>
-        <form ref={formRef} className="space-y-8 w-full max-w-[728px]">
+        <form
+          ref={formRef}
+          onSubmit={onSubmit}
+          className="space-y-8 w-full max-w-[728px]"
+        >
           <div className="flex gap-2 w-full">
             <FormField
               control={form.control}
