@@ -8,7 +8,7 @@ import { Feedback } from "./Feedback";
 
 const defaultState = [] as FeedbackDetails[];
 
-export const UserForm = () => {
+export const FeedbackForm = () => {
   const [feedbacks, setFeedbacks] = useState<FeedbackDetails[]>(defaultState);
 
   const formRef = useRef<null | HTMLFormElement>(null);

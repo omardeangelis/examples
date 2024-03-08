@@ -1,7 +1,7 @@
 import { FeedbackDetails } from "@/types";
 import React from "react";
 
-export const Feedback = ({ id, feedback, vote }: FeedbackDetails) => {
+export const Feedback = ({ feedback, vote }: FeedbackDetails) => {
   return (
     <article className="flex items-center justify-between max-w-md w-full space-x-4 bg-neutral-100 p-4 rounded-r-md">
       <p className="text-lg font-medium text-neutral-800">{feedback}</p>
