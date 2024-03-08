@@ -8,7 +8,7 @@ type IssueManagerProps = Pick<FormState, "issues">;
 
 export const IssueManager = ({ issues }: IssueManagerProps) => {
   return (
-    <ul className="fixed bottom-4 right-4">
+    <ul className="fixed bottom-4 right-4 space-y-2">
       {issues!.map((issue) => (
         <TimedIssue key={issue.trim()} issue={issue} />
       ))}

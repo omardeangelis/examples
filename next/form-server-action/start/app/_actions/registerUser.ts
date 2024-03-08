@@ -1,6 +1,8 @@
 "use server";
 import { userFormSchema } from "../_utils/userFormSchema";
 
+export type FormState = any;
+
 export async function registerUser(data: FormData) {
   const formData = Object.fromEntries(data);
   const validationResult = userFormSchema.safeParse(formData);
